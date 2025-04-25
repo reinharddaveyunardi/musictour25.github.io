@@ -9,6 +9,7 @@
     --bg-color: #1d1d1d;
     --txt-color-white: #fff;
     --txt-color-gray: #c4c4c4;
+    --white: #d5d5d5;
     --primary: #892048;
     --secondary: #b86f2b;
     --special-gothic-expanded-one-regular: "Special Gothic Expanded One", sans-serif;
@@ -51,6 +52,14 @@ section {
     text-decoration: none;
     color: var(--txt-color-white);
     font-family: var(--special-gothic-expanded-one-regular);
+}
+.navbar .link a:hover {
+    color: var(--primary);
+    transition: all 0.3s ease;
+    text-decoration: underline;
+}
+.navbar .link a:active {
+    color: var(--secondary);
 }
 .navbar.scrolled {
     background-color: var(--bg-color);
@@ -224,7 +233,123 @@ section .artist .card .card__content button:hover {
     background-color: var(--txt-color-white);
     color: var(--bg-color);
 }
+/* TIKET */
+.ticket__section {
+    height: auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://images.unsplash.com/photo-1684679493212-6adfaf58c388?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+.ticket__section .title {
+    color: var(--txt-color-white);
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 1rem 5rem;
+    font-family: var(--special-gothic-expanded-one-regular);
+}
+.ticket__section .ticket__list {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 5rem;
+}
+.ticket__section .ticket__list .ticket__card {
+    font-family: var(--special-gothic-expanded-one-regular);
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    padding: 1rem;
+    justify-content: space-between;
+    height: 400px;
+    border-radius: 0.5rem;
+}
+.ticket__section .ticket__list .ticket__card .ticket__title {
+    color: var(--txt-color-white);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.ticket__title h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--txt-color-white);
+}
+.ticket__section .ticket__list .ticket__card .ticket__content {
+    color: var(--txt-color-white);
+    font-size: 1rem;
+}
+.ticket__content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.ticket__section .ticket__list .ticket__card .ticket__price {
+    color: var(--txt-color-white);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.ticket__price button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    color: var(--txt-color-white);
+    font-size: 1rem;
+    font-weight: bold;
+    border: 1px solid var(--txt-color-white);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.ticket__price button:hover {
+    background-color: var(--txt-color-white);
+    color: var(--bg-color);
+}
+.ticket__section .ticket__list .ticket__card .ticket__button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+/* FOOTER */
+footer {
+    background-color: var(--bg-color);
+    background-color: var(--white);
+    font-family: var(--special-gothic-expanded-one-regular) !important;
+    padding: 1rem 5rem;
+}
+footer .footerWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+footer .footerWrapper .links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+footer .footerWrapper .links .link a {
+    color: var(--bg-color);
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+footer .footerWrapper .links .link a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+footer p {
+    font-family: sans-serif !important;
+}
 
+/* RESPONSIVE */
 @media screen and (max-width: 768px) {
     /* Navbar */
     .navbar {
@@ -281,6 +406,41 @@ section .artist .card .card__content button:hover {
         font-size: 0.8rem;
     }
     section .artist .card .card__content button {
+        font-size: 0.8rem;
+    }
+
+    /* TICKET */
+    .ticket__section {
+        height: 100%;
+        background-color: var(--bg-color);
+    }
+    .ticket__section .title {
+        font-size: 1.6rem;
+        padding: 1rem;
+    }
+    .ticket__section .ticket__list {
+        padding: 1rem 2rem;
+    }
+    .ticket__section .ticket__list .ticket__card {
+        padding: 1rem;
+    }
+    .ticket__section .ticket__list .ticket__card .ticket__title h1 {
+        font-size: 1.2rem;
+    }
+    .ticket__section .ticket__list .ticket__card .ticket__title h2 {
+        font-size: 1rem;
+    }
+
+    /* FOOTER */
+    footer {
+        padding: 1rem;
+    }
+    footer .footerWrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    footer .footerWrapper .links .link a {
         font-size: 0.8rem;
     }
 }
