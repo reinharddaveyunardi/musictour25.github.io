@@ -25,6 +25,7 @@ button {
 }
 section {
     background-color: var(--bg-color);
+    height: auto;
 }
 
 /* Navbar */
